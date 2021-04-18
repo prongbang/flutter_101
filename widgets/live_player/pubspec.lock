@@ -58,7 +58,7 @@ packages:
     source: hosted
     version: "0.17.0"
   cupertino_icons:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: cupertino_icons
       url: "https://pub.dartlang.org"
@@ -121,13 +121,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.6.3"
-  live_player:
-    dependency: "direct main"
-    description:
-      path: "widgets/live_player"
-      relative: true
-    source: path
-    version: "0.0.1"
   matcher:
     dependency: transitive
     description:
@@ -273,13 +266,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
-  video_streaming:
-    dependency: "direct main"
-    description:
-      path: "features/video_streaming"
-      relative: true
-    source: path
-    version: "0.0.1"
   visibility_detector:
     dependency: transitive
     description:
