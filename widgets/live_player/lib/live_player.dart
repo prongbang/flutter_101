@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
 
@@ -31,6 +33,10 @@ class _LivePlayerState extends State<LivePlayer> {
           betterPlayerDataSource: BetterPlayerDataSource(
             BetterPlayerDataSourceType.network,
             widget.url,
+            headers: {
+              HttpHeaders.authorizationHeader:
+                  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5In0.Ww7OlKzPUUfKX4kO8iON0_k7xgdsMu9hr5ZPufSirDw",
+            },
             liveStream: false,
             useHlsSubtitles: true,
             hlsTrackNames: [
