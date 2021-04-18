@@ -28,7 +28,6 @@ class _LivePlayerState extends State<LivePlayer> {
         controller: BetterPlayerController(
           const BetterPlayerConfiguration(
             autoPlay: true,
-            fullScreenByDefault: true,
           ),
           betterPlayerDataSource: BetterPlayerDataSource(
             BetterPlayerDataSourceType.network,
