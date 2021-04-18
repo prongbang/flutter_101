@@ -4,6 +4,28 @@ Flutter 101 application.
 
 - Slide: https://docs.google.com/presentation/d/1pXJIa3Pdygfw8GzQtKoNYpAsY5a2-1KTa8vzgN0sQdo?usp=sharing
 
+### Enable by platforms
+
+```bash
+$ flutter config --enable-web
+$ flutter config --enable-windows-desktop
+$ flutter config --enable-macos-desktop
+$ flutter config --enable-linux-desktop
+```
+
+### Add platforms support to an existing app
+
+```bash
+$ cd flutter_101
+$ flutter create --platforms=web,windows,macos,linux .
+```
+
+### List the devices
+
+```bash
+$ flutter devices
+```
+
 ### Create Feature Package
 
 ```
