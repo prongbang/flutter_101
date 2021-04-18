@@ -2,6 +2,8 @@
 
 Flutter 101 application.
 
+- Slide: https://docs.google.com/presentation/d/1pXJIa3Pdygfw8GzQtKoNYpAsY5a2-1KTa8vzgN0sQdo?usp=sharing
+
 ### Create Feature Package
 
 ```
