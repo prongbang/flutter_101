@@ -1,0 +1,1 @@
+class NoContentException implements Exception {}

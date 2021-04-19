@@ -24,6 +24,22 @@ dependencies:
   flutter:
     sdk: flutter
   better_player: ^0.0.64
+  dio: ^4.0.0
+  get_it: ^5.0.6
+
+  # core package
+  core:
+    path: ./core
+
+  # commons package
+  network:
+    path: ./commons/network
+#  datastore:
+#    path: ./commons/datastore
+
+  # theme package
+#  theme:
+#    path: ./theme
 
   # widgets package
   live_player:
