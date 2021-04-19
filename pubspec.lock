@@ -273,13 +273,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
-  video_streaming:
-    dependency: "direct main"
-    description:
-      path: "features/video_streaming"
-      relative: true
-    source: path
-    version: "0.0.1"
   visibility_detector:
     dependency: transitive
     description:
@@ -322,6 +315,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.0"
+  we_channel:
+    dependency: "direct main"
+    description:
+      path: "features/we_channel"
+      relative: true
+    source: path
+    version: "0.0.1"
   win32:
     dependency: transitive
     description:

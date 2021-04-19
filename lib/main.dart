@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:video_streaming/video_streaming_page.dart';
+import 'package:we_channel/we_channel_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -58,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (BuildContext context) => VideoStreamingPage(),
+                    builder: (BuildContext context) => WeChannelPage(),
                   ),
                 );
               },

@@ -1,4 +1,4 @@
-# video_streaming
+# we_channel
 
 A new Flutter package project.
 
