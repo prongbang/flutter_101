@@ -1,5 +1,5 @@
-name: navigation
-description: Navigation package.
+name: routers
+description: Routers package.
 version: 0.0.1
 author:
 homepage:
@@ -13,6 +13,13 @@ dependencies:
   flutter:
     sdk: flutter
   page_transition: ^1.1.7+6
+
+  # navigation package
+  navigation:
+    path: ../navigation
+
+  # features package
+
 
 dev_dependencies:
   flutter_test:

@@ -170,6 +170,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.3.0"
+  navigation:
+    dependency: transitive
+    description:
+      path: navigation
+      relative: true
+    source: path
+    version: "0.0.1"
   network:
     dependency: "direct main"
     description:
@@ -177,6 +184,13 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
+  page_transition:
+    dependency: transitive
+    description:
+      name: page_transition
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.7+6"
   path:
     dependency: transitive
     description:
@@ -247,6 +261,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.1"
+  routers:
+    dependency: "direct main"
+    description:
+      path: routers
+      relative: true
+    source: path
+    version: "0.0.1"
   sky_engine:
     dependency: transitive
     description: flutter

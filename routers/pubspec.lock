@@ -74,6 +74,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.3.0"
+  navigation:
+    dependency: "direct main"
+    description:
+      path: "../navigation"
+      relative: true
+    source: path
+    version: "0.0.1"
   page_transition:
     dependency: "direct main"
     description:

@@ -31,6 +31,10 @@ dependencies:
   core:
     path: ./core
 
+  # routers package
+  routers:
+    path: ./routers
+
   # commons package
   network:
     path: ./commons/network
@@ -69,6 +73,9 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
+#  assets:
+#    - assets/
+#    - assets/icons
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
@@ -84,6 +91,13 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+#  fonts:
+#    - family: Krungsri Bold
+#      fonts:
+#        - asset: assets/fonts/krungsri-condensed-Bold.ttf
+#    - family: Krungsri Regular
+#      fonts:
+#        - asset: assets/fonts/krungsri-condensed-Regular.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:
