@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:we_channel/we_channel_widget.dart';
+import 'package:we_channel/presentation/we_channel_widget.dart';
 
 class WeChannelPage extends StatelessWidget {
   @override

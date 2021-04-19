@@ -2,7 +2,7 @@ import 'package:core/app_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_101/src/di/service_locator.dart';
 import 'package:get_it/get_it.dart';
-import 'package:we_channel/we_channel_page.dart';
+import 'package:we_channel/presentation/we_channel_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
