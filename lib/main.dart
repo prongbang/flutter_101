@@ -22,8 +22,29 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter 101',
       // debugShowCheckedModeBanner: false,
+      //
+      // # 1
+      // initialRoute: '/',
+      // routes: {
+      //   "/we-channel": (context) => WeChannelPage(),
+      // },
+      //
+      // # 2
       // onGenerateRoute: AppRouters.routes,
-      // theme: themeWec,
+      onGenerateRoute: (RouteSettings settings) {
+        return MaterialPageRoute(
+          settings: settings,
+          builder: (context) {
+            switch (settings.name) {
+              case '/we-channel':
+                return WeChannelPage();
+              default:
+                return Scaffold(body: Center(child: Text('Page not found')));
+            }
+          },
+        );
+      },
+      // theme: myTheme,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -56,25 +77,26 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
+      body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
+            // LayoutPage(),
+            // StackPage(),
+            Text('You have pushed the button this many times:'),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
             TextButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (BuildContext context) => WeChannelPage(),
-                  ),
-                );
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (BuildContext context) => WeChannelPage(),
+                //   ),
+                // );
+                Navigator.pushNamed(context, '/we-channel');
               },
               child: Text('Open Live Stream player'),
             ),
