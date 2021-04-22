@@ -4,6 +4,7 @@ class StackPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.cyan,
       child: Stack(
         children: <Widget>[
           Container(
