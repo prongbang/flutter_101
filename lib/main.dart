@@ -5,6 +5,9 @@ import 'package:flutter_101/src/widgets/_14scaffold/scaffold_page.dart';
 import 'package:flutter_101/src/widgets/_15appbar/appbar_page.dart';
 import 'package:flutter_101/src/widgets/_15appbar/sliver_app_bar_page.dart';
 import 'package:flutter_101/src/widgets/_18scrolling/single_child_scroll_view_page.dart';
+import 'package:flutter_101/src/widgets/_23bottombar/bottom_navigation_bar_page.dart';
+import 'package:flutter_101/src/widgets/_24drawer/drawer_page.dart';
+import 'package:flutter_101/src/widgets/_29date_picker/date_picker_page.dart';
 import 'package:get_it/get_it.dart';
 import 'package:we_channel/presentation/we_channel_page.dart';
 
@@ -31,6 +34,7 @@ class MyApp extends StatelessWidget {
       // initialRoute: '/',
       // routes: {
       //   "/we-channel": (context) => WeChannelPage(),
+      //   "/navigator": (context) => NavigatorPage(),
       // },
       //
       // # 2
@@ -104,6 +108,20 @@ class _MyHomePageState extends State<MyHomePage> {
             // ListViewPage(),
             // GridViewPage(),
             // _buildSingleChildScrollViewPageButton(context),
+            // RefreshIndicatorPage(),
+            // PageViewPage(),
+            // RichTextPage(),
+            // TextFieldPage(),
+            // TextFormFieldPage(),
+            // AlertDialogPage(),
+            // BottomSheetDialogPage(),
+            // _buildBottomNavigationBarPageButton(context),
+            // _buildDrawerPageButton(context),
+            // SnackBarPage(),
+            // LoadingPage(),
+            // CheckboxRadioPage(),
+            // SwitchPage(),
+            DatePickerPage(),
 
             Text('You have pushed the button this many times:'),
             Text(
@@ -124,6 +142,34 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ),
+    );
+  }
+
+  MaterialButton _buildDrawerPageButton(BuildContext context) {
+    return MaterialButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (BuildContext context) => DrawerPage(),
+          ),
+        );
+      },
+      child: Text('DrawerPage'),
+    );
+  }
+
+  MaterialButton _buildBottomNavigationBarPageButton(BuildContext context) {
+    return MaterialButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (BuildContext context) => BottomNavigationBarPage(),
+          ),
+        );
+      },
+      child: Text('BottomNavigationBarPage'),
     );
   }
 
