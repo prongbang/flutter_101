@@ -4,6 +4,8 @@ import 'package:flutter_101/src/asynchronous/asynchronous_page.dart';
 import 'package:flutter_101/src/di/service_locator.dart';
 import 'package:flutter_101/src/navigator/navigator_page.dart';
 import 'package:flutter_101/src/packages/liquid_swipe_page.dart';
+import 'package:flutter_101/src/state/bloc_page.dart';
+import 'package:flutter_101/src/state/state_page.dart';
 import 'package:flutter_101/src/widgets/_14scaffold/scaffold_page.dart';
 import 'package:flutter_101/src/widgets/_15appbar/appbar_page.dart';
 import 'package:flutter_101/src/widgets/_15appbar/sliver_app_bar_page.dart';
@@ -131,17 +133,14 @@ class _MyHomePageState extends State<MyHomePage> {
             // _buildNavigatorPageButton(context),
             // _buildLiquidSwipePageButton(context),
             // _buildAsynchronousPageButton(context),
+            // _buildStatePageButton(context),
+            // _buildBlocPageButton(context),
+            // _buildWeChannelPageButton(context),
 
             Text('You have pushed the button this many times:'),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
-            ),
-            TextButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/we-channel');
-              },
-              child: Text('Open Live Stream player'),
             ),
           ],
         ),
@@ -154,17 +153,20 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  MaterialButton _buildNavigatorPageButton(BuildContext context) {
-    return MaterialButton(
+  Widget _buildNavigatorPageButton(BuildContext context) {
+    return CustomButton(
+      text: 'Navigator Page',
+      color: Colors.amber,
       onPressed: () {
         Navigator.pushNamed(context, '/navigator');
       },
-      child: Text('Navigator Page'),
     );
   }
 
-  MaterialButton _buildDrawerPageButton(BuildContext context) {
-    return MaterialButton(
+  Widget _buildDrawerPageButton(BuildContext context) {
+    return CustomButton(
+      text: 'Drawer Page',
+      color: Colors.orange,
       onPressed: () {
         Navigator.push(
           context,
@@ -173,12 +175,43 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         );
       },
-      child: Text('Drawer Page'),
     );
   }
 
-  MaterialButton _buildAsynchronousPageButton(BuildContext context) {
-    return MaterialButton(
+  Widget _buildBlocPageButton(BuildContext context) {
+    return CustomButton(
+      text: 'BloC Page',
+      color: Colors.deepPurple,
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (BuildContext context) => BlocPage(),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildStatePageButton(BuildContext context) {
+    return CustomButton(
+      text: 'State Page',
+      color: Colors.blue,
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (BuildContext context) => StatePage(),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildAsynchronousPageButton(BuildContext context) {
+    return CustomButton(
+      text: 'Asynchronous Page',
+      color: Colors.green,
       onPressed: () {
         Navigator.push(
           context,
@@ -187,12 +220,13 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         );
       },
-      child: Text('Asynchronous Page'),
     );
   }
 
-  MaterialButton _buildLiquidSwipePageButton(BuildContext context) {
-    return MaterialButton(
+  Widget _buildLiquidSwipePageButton(BuildContext context) {
+    return CustomButton(
+      text: 'Liquid Swipe Page',
+      color: Colors.red,
       onPressed: () {
         Navigator.push(
           context,
@@ -201,12 +235,13 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         );
       },
-      child: Text('Liquid Swipe Page'),
     );
   }
 
-  MaterialButton _buildBottomNavigationBarPageButton(BuildContext context) {
-    return MaterialButton(
+  Widget _buildBottomNavigationBarPageButton(BuildContext context) {
+    return CustomButton(
+      text: 'Bottom Navigation Bar Page',
+      color: Colors.cyan,
       onPressed: () {
         Navigator.push(
           context,
@@ -215,12 +250,14 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         );
       },
-      child: Text('Bottom Navigation Bar Page'),
     );
   }
 
-  MaterialButton _buildSingleChildScrollViewPageButton(BuildContext context) {
-    return MaterialButton(
+  Widget _buildSingleChildScrollViewPageButton(BuildContext context) {
+    return CustomButton(
+      text: 'Single Child Scroll View Page',
+      color: Colors.lightGreenAccent,
+      textColor: Colors.black,
       onPressed: () {
         Navigator.push(
           context,
@@ -229,12 +266,13 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         );
       },
-      child: Text('Single Child Scroll View Page'),
     );
   }
 
-  MaterialButton _buildScaffoldPageButton(BuildContext context) {
-    return MaterialButton(
+  Widget _buildScaffoldPageButton(BuildContext context) {
+    return CustomButton(
+      text: 'Scaffold Page',
+      color: Colors.blueGrey,
       onPressed: () {
         Navigator.push(
           context,
@@ -243,12 +281,14 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         );
       },
-      child: Text('Scaffold Page'),
     );
   }
 
-  MaterialButton _buildAppBarButton(BuildContext context) {
-    return MaterialButton(
+  Widget _buildAppBarButton(BuildContext context) {
+    return CustomButton(
+      text: 'App Page',
+      color: Colors.grey,
+      textColor: Colors.black,
       onPressed: () {
         Navigator.push(
           context,
@@ -257,12 +297,13 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         );
       },
-      child: Text('App Bar'),
     );
   }
 
-  MaterialButton _buildSliverAppBarPageButton(BuildContext context) {
-    return MaterialButton(
+  Widget _buildSliverAppBarPageButton(BuildContext context) {
+    return CustomButton(
+      text: 'Sliver App Page',
+      color: Colors.brown,
       onPressed: () {
         Navigator.push(
           context,
@@ -271,7 +312,48 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         );
       },
-      child: Text('Sliver App Bar'),
+    );
+  }
+
+  Widget _buildWeChannelPageButton(BuildContext context) {
+    return CustomButton(
+      text: 'WE Channel Page',
+      color: Colors.pink,
+      onPressed: () {
+        Navigator.pushNamed(context, '/we-channel');
+      },
+    );
+  }
+}
+
+class CustomButton extends StatelessWidget {
+  final Color color;
+  final Color textColor;
+  final VoidCallback onPressed;
+  final String text;
+
+  const CustomButton({
+    Key key,
+    @required this.color,
+    @required this.onPressed,
+    @required this.text,
+    this.textColor = Colors.white,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: MaterialButton(
+          color: color,
+          textColor: textColor,
+          height: 60,
+          onPressed: onPressed,
+          child: Text(text),
+        ),
+      ),
     );
   }
 }

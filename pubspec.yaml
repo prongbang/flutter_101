@@ -27,6 +27,9 @@ dependencies:
   dio: ^4.0.0
   get_it: ^5.0.6
   liquid_swipe: ^2.1.0
+  bloc: ^7.0.0
+  flutter_bloc: ^7.0.0
+  equatable: ^2.0.0
 
   # core package
   core:
