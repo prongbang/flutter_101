@@ -26,6 +26,7 @@ dependencies:
   better_player: ^0.0.64
   dio: ^4.0.0
   get_it: ^5.0.6
+  liquid_swipe: ^2.1.0
 
   # core package
   core:

@@ -2,6 +2,7 @@ import 'package:core/app_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_101/src/di/service_locator.dart';
 import 'package:flutter_101/src/navigator/navigator_page.dart';
+import 'package:flutter_101/src/packages/liquid_swipe_page.dart';
 import 'package:flutter_101/src/widgets/_14scaffold/scaffold_page.dart';
 import 'package:flutter_101/src/widgets/_15appbar/appbar_page.dart';
 import 'package:flutter_101/src/widgets/_15appbar/sliver_app_bar_page.dart';
@@ -127,6 +128,7 @@ class _MyHomePageState extends State<MyHomePage> {
             // SwitchPage(),
             // DatePickerPage(),
             // _buildNavigatorPageButton(context),
+            // _buildLiquidSwipePageButton(context),
 
             Text('You have pushed the button this many times:'),
             Text(
@@ -155,7 +157,7 @@ class _MyHomePageState extends State<MyHomePage> {
       onPressed: () {
         Navigator.pushNamed(context, '/navigator');
       },
-      child: Text('NavigatorPage'),
+      child: Text('Navigator Page'),
     );
   }
 
@@ -169,7 +171,21 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         );
       },
-      child: Text('DrawerPage'),
+      child: Text('Drawer Page'),
+    );
+  }
+
+  MaterialButton _buildLiquidSwipePageButton(BuildContext context) {
+    return MaterialButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (BuildContext context) => LiquidSwipePage(),
+          ),
+        );
+      },
+      child: Text('Liquid Swipe Page'),
     );
   }
 
@@ -183,7 +199,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         );
       },
-      child: Text('BottomNavigationBarPage'),
+      child: Text('Bottom Navigation Bar Page'),
     );
   }
 
@@ -197,7 +213,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         );
       },
-      child: Text('SingleChildScrollViewPage'),
+      child: Text('Single Child Scroll View Page'),
     );
   }
 
@@ -211,7 +227,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         );
       },
-      child: Text('ScaffoldPage'),
+      child: Text('Scaffold Page'),
     );
   }
 
@@ -225,7 +241,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         );
       },
-      child: Text('AppBar'),
+      child: Text('App Bar'),
     );
   }
 
@@ -239,7 +255,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         );
       },
-      child: Text('SliverAppBar'),
+      child: Text('Sliver App Bar'),
     );
   }
 }
