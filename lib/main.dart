@@ -1,13 +1,13 @@
 import 'package:core/app_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_101/src/di/service_locator.dart';
+import 'package:flutter_101/src/navigator/navigator_page.dart';
 import 'package:flutter_101/src/widgets/_14scaffold/scaffold_page.dart';
 import 'package:flutter_101/src/widgets/_15appbar/appbar_page.dart';
 import 'package:flutter_101/src/widgets/_15appbar/sliver_app_bar_page.dart';
 import 'package:flutter_101/src/widgets/_18scrolling/single_child_scroll_view_page.dart';
 import 'package:flutter_101/src/widgets/_23bottombar/bottom_navigation_bar_page.dart';
 import 'package:flutter_101/src/widgets/_24drawer/drawer_page.dart';
-import 'package:flutter_101/src/widgets/_29date_picker/date_picker_page.dart';
 import 'package:get_it/get_it.dart';
 import 'package:we_channel/presentation/we_channel_page.dart';
 
@@ -46,6 +46,10 @@ class MyApp extends StatelessWidget {
             switch (settings.name) {
               case '/we-channel':
                 return WeChannelPage();
+              case '/navigator':
+                return NavigatorPage();
+              case '/':
+                return MyHomePage(title: 'Flutter Demo Home Page');
               default:
                 return Scaffold(body: Center(child: Text('Page not found')));
             }
@@ -121,7 +125,8 @@ class _MyHomePageState extends State<MyHomePage> {
             // LoadingPage(),
             // CheckboxRadioPage(),
             // SwitchPage(),
-            DatePickerPage(),
+            // DatePickerPage(),
+            // _buildNavigatorPageButton(context),
 
             Text('You have pushed the button this many times:'),
             Text(
@@ -142,6 +147,15 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ),
+    );
+  }
+
+  MaterialButton _buildNavigatorPageButton(BuildContext context) {
+    return MaterialButton(
+      onPressed: () {
+        Navigator.pushNamed(context, '/navigator');
+      },
+      child: Text('NavigatorPage'),
     );
   }
 
