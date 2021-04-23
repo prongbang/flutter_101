@@ -1,5 +1,6 @@
 import 'package:core/app_config.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_101/src/asynchronous/asynchronous_page.dart';
 import 'package:flutter_101/src/di/service_locator.dart';
 import 'package:flutter_101/src/navigator/navigator_page.dart';
 import 'package:flutter_101/src/packages/liquid_swipe_page.dart';
@@ -129,6 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
             // DatePickerPage(),
             // _buildNavigatorPageButton(context),
             // _buildLiquidSwipePageButton(context),
+            // _buildAsynchronousPageButton(context),
 
             Text('You have pushed the button this many times:'),
             Text(
@@ -172,6 +174,20 @@ class _MyHomePageState extends State<MyHomePage> {
         );
       },
       child: Text('Drawer Page'),
+    );
+  }
+
+  MaterialButton _buildAsynchronousPageButton(BuildContext context) {
+    return MaterialButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (BuildContext context) => AsynchronousPage(),
+          ),
+        );
+      },
+      child: Text('Asynchronous Page'),
     );
   }
 
