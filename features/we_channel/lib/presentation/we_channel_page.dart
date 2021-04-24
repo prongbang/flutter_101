@@ -6,7 +6,7 @@ class WeChannelPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Player'),
+        title: Text('WE CHANNEL'),
       ),
       body: SafeArea(
         child: WeChannelWidget(),

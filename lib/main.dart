@@ -62,7 +62,7 @@ class MyApp extends StatelessWidget {
       },
       // theme: myTheme,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.indigo,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -135,7 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
             // _buildAsynchronousPageButton(context),
             // _buildStatePageButton(context),
             // _buildBlocPageButton(context),
-            // _buildWeChannelPageButton(context),
+            _buildWeChannelPageButton(context),
 
             Text('You have pushed the button this many times:'),
             Text(
