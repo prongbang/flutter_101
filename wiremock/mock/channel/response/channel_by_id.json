@@ -1,6 +1,61 @@
 {
     "id": 1,
-    "title": "Stream 1",
+    "title": "Trembling Flying",
     "cover": "https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    "hlsUrl": "https://content.jwplatform.com/manifests/yp34SRmf.m3u8"
+    "hlsUrl": "https://content.jwplatform.com/manifests/yp34SRmf.m3u8",
+    "author": "Tamati Anis",
+    "avatar": "https://ui-avatars.com/api/?background=random",
+    "view": "100M views",
+    "date": "2 days ago",
+    "comments": [
+        {
+            "id": 1,
+            "user": "Tihomira Dieudonné",
+            "avatar": "https://ui-avatars.com/api/?background=random",
+            "date": "1 day ago",
+            "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+            "id": 2,
+            "user": "Aleĉjo Amani",
+            "avatar": "https://ui-avatars.com/api/?background=random",
+            "date": "2 days ago",
+            "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+            "id": 3,
+            "user": "Ariadne Businge",
+            "avatar": "https://ui-avatars.com/api/?background=random",
+            "date": "3 days ago",
+            "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+            "id": 4,
+            "user": "Jackin Angela",
+            "avatar": "https://ui-avatars.com/api/?background=random",
+            "date": "4 days ago",
+            "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+            "id": 5,
+            "user": "Or Delphine",
+            "avatar": "https://ui-avatars.com/api/?background=random",
+            "date": "5 days ago",
+            "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+            "id": 6,
+            "user": "Carlu Geoffroi",
+            "avatar": "https://ui-avatars.com/api/?background=random",
+            "date": "6 days ago",
+            "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        },
+        {
+            "id": 7,
+            "user": "Valentine Lysander",
+            "avatar": "https://ui-avatars.com/api/?background=random",
+            "date": "7 days ago",
+            "comment": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        }
+    ]
 }

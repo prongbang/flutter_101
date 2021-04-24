@@ -1,110 +1,182 @@
 [
     {
         "id": 1,
-        "title": "Stream 1",
+        "title": "Trembling Flying",
         "cover": "https://images.pexels.com/photos/5011647/pexels-photo-5011647.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        "hlsUrl": "https://content.jwplatform.com/manifests/yp34SRmf.m3u8"
+        "hlsUrl": "https://content.jwplatform.com/manifests/yp34SRmf.m3u8",
+        "author": "Tamati Anis",
+        "avatar": "https://ui-avatars.com/api/?background=random",
+        "view": "100M views",
+        "date": "2 days ago",
     },
     {
         "id": 2,
-        "title": "Stream 2",
+        "title": "The Shadowy Names",
         "cover": "https://images.pexels.com/photos/924824/pexels-photo-924824.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        "hlsUrl": "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8"
+        "hlsUrl": "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
+        "author": "Tamati Anis",
+        "avatar": "https://ui-avatars.com/api/?background=random",
+        "view": "100M views",
+        "date": "2 days ago",
     },
     {
         "id": 3,
-        "title": "Stream 3",
+        "title": "Man of Child",
         "cover": "https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        "hlsUrl": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
+        "hlsUrl": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+        "author": "Tamati Anis",
+        "avatar": "https://ui-avatars.com/api/?background=random",
+        "view": "100M views",
+        "date": "2 days ago",
     },
     {
         "id": 4,
-        "title": "Stream 4",
+        "title": "The Heart's Alien",
         "cover": "https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        "hlsUrl": "https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8"
+        "hlsUrl": "https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8",
+        "author": "Tamati Anis",
+        "avatar": "https://ui-avatars.com/api/?background=random",
+        "view": "100M views",
+        "date": "2 days ago",
     },
     {
         "id": 5,
-        "title": "Stream 5",
+        "title": "The Bride of the Trainer",
         "cover": "https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        "hlsUrl": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8"
+        "hlsUrl": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+        "author": "Tamati Anis",
+        "avatar": "https://ui-avatars.com/api/?background=random",
+        "view": "100M views",
+        "date": "2 days ago",
     },
     {
         "id": 6,
-        "title": "Stream 6",
+        "title": "Beginning in the Crying",
         "cover": "https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        "hlsUrl": "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8"
+        "hlsUrl": "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8",
+        "author": "Tamati Anis",
+        "avatar": "https://ui-avatars.com/api/?background=random",
+        "view": "100M views",
+        "date": "2 days ago",
     },
     {
         "id": 7,
-        "title": "Stream 7",
+        "title": "Stripped History",
         "cover": "https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        "hlsUrl": "https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"
+        "hlsUrl": "https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8",
+        "author": "Tamati Anis",
+        "avatar": "https://ui-avatars.com/api/?background=random",
+        "view": "100M views",
+        "date": "2 days ago",
     },
     {
         "id": 8,
-        "title": "Stream 8",
+        "title": "The Sucking Dreams",
         "cover": "https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        "hlsUrl": "https://edge.flowplayer.org/playful.m3u8"
+        "hlsUrl": "https://edge.flowplayer.org/playful.m3u8",
+        "author": "Tamati Anis",
+        "avatar": "https://ui-avatars.com/api/?background=random",
+        "view": "100M views",
+        "date": "2 days ago",
     },
     {
         "id": 9,
-        "title": "Stream 9",
+        "title": "Luck of Dreamer",
         "cover": "https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        "hlsUrl": "https://vd1.wmspanel.com/video_demo/stream/playlist.m3u8"
+        "hlsUrl": "https://vd1.wmspanel.com/video_demo/stream/playlist.m3u8",
+        "author": "Tamati Anis",
+        "avatar": "https://ui-avatars.com/api/?background=random",
+        "view": "100M views",
+        "date": "2 days ago",
     },
     {
         "id": 10,
-        "title": "Stream 10",
+        "title": "The Thought's Prince",
         "cover": "https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        "hlsUrl": "https://content.jwplatform.com/manifests/yp34SRmf.m3u8"
+        "hlsUrl": "https://content.jwplatform.com/manifests/yp34SRmf.m3u8",
+        "author": "Tamati Anis",
+        "avatar": "https://ui-avatars.com/api/?background=random",
+        "view": "100M views",
+        "date": "2 days ago",
     },
     {
         "id": 11,
-        "title": "Stream 11",
+        "title": "The Planet of the Crying",
         "cover": "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        "hlsUrl": "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8"
+        "hlsUrl": "https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8",
+        "author": "Tamati Anis",
+        "avatar": "https://ui-avatars.com/api/?background=random",
+        "view": "100M views",
+        "date": "2 days ago",
     },
     {
         "id": 12,
-        "title": "Stream 12",
+        "title": "Guardian in the Obsession",
         "cover": "https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        "hlsUrl": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
+        "hlsUrl": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+        "author": "Tamati Anis",
+        "avatar": "https://ui-avatars.com/api/?background=random",
+        "view": "100M views",
+        "date": "2 days ago",
     },
     {
         "id": 13,
-        "title": "Stream 13",
+        "title": "The Husband of the Female",
         "cover": "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        "hlsUrl": "https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8"
+        "hlsUrl": "https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8",
+        "author": "Tamati Anis",
+        "avatar": "https://ui-avatars.com/api/?background=random",
+        "view": "100M views",
+        "date": "2 days ago",
     },
     {
         "id": 14,
-        "title": "Stream 14",
+        "title": "The Thought's Soul",
         "cover": "https://images.pexels.com/photos/531321/pexels-photo-531321.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        "hlsUrl": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8"
+        "hlsUrl": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+        "author": "Tamati Anis",
+        "avatar": "https://ui-avatars.com/api/?background=random",
+        "view": "100M views",
+        "date": "2 days ago",
     },
     {
         "id": 15,
-        "title": "Stream 15",
+        "title": "The Smooth Rainbow",
         "cover": "https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        "hlsUrl": "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8"
+        "hlsUrl": "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8",
+        "author": "Tamati Anis",
+        "avatar": "https://ui-avatars.com/api/?background=random",
+        "view": "100M views",
+        "date": "2 days ago"
     },
     {
         "id": 16,
-        "title": "Stream 16",
+        "title": "The Heat of the Silence",
         "cover": "https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        "hlsUrl": "https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"
+        "hlsUrl": "https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8",
+        "author": "Tamati Anis",
+        "avatar": "https://ui-avatars.com/api/?background=random",
+        "view": "100M views",
+        "date": "2 days ago"
     },
     {
         "id": 17,
-        "title": "Stream 17",
+        "title": "The Shadow of the Return",
         "cover": "https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        "hlsUrl": "https://edge.flowplayer.org/playful.m3u8"
+        "hlsUrl": "https://edge.flowplayer.org/playful.m3u8",
+        "author": "Tamati Anis",
+        "avatar": "https://ui-avatars.com/api/?background=random",
+        "view": "100M views",
+        "date": "2 days ago"
     },
     {
         "id": 18,
-        "title": "Stream 18",
+        "title": "The Trembling Rose",
         "cover": "https://images.pexels.com/photos/2440079/pexels-photo-2440079.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-        "hlsUrl": "https://vd1.wmspanel.com/video_demo/stream/playlist.m3u8"
+        "hlsUrl": "https://vd1.wmspanel.com/video_demo/stream/playlist.m3u8",
+        "author": "Tamati Anis",
+        "avatar": "https://ui-avatars.com/api/?background=random",
+        "view": "100M views",
+        "date": "2 days ago"
     }
 ]
