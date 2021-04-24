@@ -1,0 +1,10 @@
+FROM prongbang/wiremock:latest
+
+ENV HEROKU_PORT=$PORT
+ENV PORT=$HEROKU_PORT
+
+WORKDIR /go/bin
+
+COPY . .
+
+EXPOSE $HEROKU_PORT

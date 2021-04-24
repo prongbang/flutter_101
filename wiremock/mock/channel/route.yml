@@ -1,0 +1,39 @@
+routes:
+  get_channel:
+    request:
+      method: "GET"
+      url: "/api/v1/channel"
+    response:
+      status: 200
+      body_file: channel.json
+  get_by_id_channel:
+    request:
+      method: "GET"
+      url: "/api/v1/channel/{id:[0-9]+}"
+    response:
+      status: 200
+      body_file: channel_by_id.json
+  create_channel:
+    request:
+      method: "POST"
+      url: "/api/v1/channel"
+    response:
+      status: 201
+      body: >
+        {"message": "success"}
+  update_channel:
+    request:
+      method: "PUT"
+      url: "/api/v1/channel/{id:[0-9]+}"
+    response:
+      status: 200
+      body: >
+        {"message": "success"}
+  delete_channel:
+    request:
+      method: "DELETE"
+      url: "/api/v1/channel/{id:[0-9]+}"
+    response:
+      status: 200
+      body: >
+        {"message": "success"}

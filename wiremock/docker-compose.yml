@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  app_wiremock:
+    image: .
+    ports:
+      - "8008:8000"
+    volumes:
+      - "./mock:/mock"
