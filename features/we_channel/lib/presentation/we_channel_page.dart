@@ -8,9 +8,7 @@ class WeChannelPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('WE CHANNEL'),
       ),
-      body: SafeArea(
-        child: WeChannelWidget(),
-      ),
+      body: WeChannelWidget(),
     );
   }
 }
