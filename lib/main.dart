@@ -2,6 +2,8 @@ import 'package:core/app_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_101/src/asynchronous/asynchronous_page.dart';
 import 'package:flutter_101/src/di/service_locator.dart';
+import 'package:flutter_101/src/login/login_page.dart';
+import 'package:flutter_101/src/login/user.dart';
 import 'package:flutter_101/src/navigator/navigator_page.dart';
 import 'package:flutter_101/src/packages/liquid_swipe_page.dart';
 import 'package:flutter_101/src/qr_reader/qr_reader_page.dart';
@@ -14,10 +16,12 @@ import 'package:flutter_101/src/widgets/_18scrolling/single_child_scroll_view_pa
 import 'package:flutter_101/src/widgets/_23bottombar/bottom_navigation_bar_page.dart';
 import 'package:flutter_101/src/widgets/_24drawer/drawer_page.dart';
 import 'package:get_it/get_it.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:we_channel/presentation/we_channel_page.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await GetStorage.init();
   GetIt.I.registerFactory(() => AppConfig(
         applicationName: "Flutter 101",
         buildFlavor: AppConfig.productionFlavor,
@@ -49,12 +53,14 @@ class MyApp extends StatelessWidget {
           settings: settings,
           builder: (context) {
             switch (settings.name) {
-              case '/we-channel':
-                return WeChannelPage();
-              case '/navigator':
-                return NavigatorPage();
               case '/':
                 return MyHomePage(title: 'Flutter Demo Home Page');
+              case '/login':
+                return LoginPage();
+              case '/navigator':
+                return NavigatorPage();
+              case '/we-channel':
+                return WeChannelPage();
               default:
                 return Scaffold(body: Center(child: Text('Page not found')));
             }
@@ -66,6 +72,15 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.indigo,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
+      // home: FutureBuilder<User>(
+      //   future: User().get(),
+      //   builder: (context, snapshot) {
+      //     if (snapshot.hasData) {
+      //       return MyHomePage(title: 'Flutter Demo Home Page');
+      //     }
+      //     return LoginPage();
+      //   },
+      // ),
     );
   }
 }
@@ -138,6 +153,8 @@ class _MyHomePageState extends State<MyHomePage> {
             // _buildBlocPageButton(context),
             // _buildWeChannelPageButton(context),
             // _buildQrReaderPageButton(context),
+            // _buildLoginPageButton(context),
+            // _buildLogoutButton(context),
 
             Text('You have pushed the button this many times:'),
             Text(
@@ -206,6 +223,27 @@ class _MyHomePageState extends State<MyHomePage> {
             builder: (BuildContext context) => StatePage(),
           ),
         );
+      },
+    );
+  }
+
+  Widget _buildLoginPageButton(BuildContext context) {
+    return CustomButton(
+      text: 'Login Page',
+      color: Colors.blue,
+      onPressed: () {
+        Navigator.pushReplacementNamed(context, '/login');
+      },
+    );
+  }
+
+  Widget _buildLogoutButton(BuildContext context) {
+    return CustomButton(
+      text: 'Logout',
+      color: Colors.red,
+      onPressed: () async {
+        await User().logout();
+        Navigator.pushReplacementNamed(context, '/login');
       },
     );
   }
