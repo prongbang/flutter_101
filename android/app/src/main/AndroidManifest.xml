@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.krungsri.flutter_101">
+    <uses-permission android:name="android.permission.CAMERA"/>
    <application
         android:label="flutter_101"
         android:icon="@mipmap/ic_launcher">
