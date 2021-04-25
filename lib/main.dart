@@ -4,6 +4,7 @@ import 'package:flutter_101/src/asynchronous/asynchronous_page.dart';
 import 'package:flutter_101/src/di/service_locator.dart';
 import 'package:flutter_101/src/navigator/navigator_page.dart';
 import 'package:flutter_101/src/packages/liquid_swipe_page.dart';
+import 'package:flutter_101/src/qr_reader/qr_reader_page.dart';
 import 'package:flutter_101/src/state/bloc_page.dart';
 import 'package:flutter_101/src/state/state_page.dart';
 import 'package:flutter_101/src/widgets/_14scaffold/scaffold_page.dart';
@@ -135,7 +136,8 @@ class _MyHomePageState extends State<MyHomePage> {
             // _buildAsynchronousPageButton(context),
             // _buildStatePageButton(context),
             // _buildBlocPageButton(context),
-            _buildWeChannelPageButton(context),
+            // _buildWeChannelPageButton(context),
+            // _buildQrReaderPageButton(context),
 
             Text('You have pushed the button this many times:'),
             Text(
@@ -309,6 +311,21 @@ class _MyHomePageState extends State<MyHomePage> {
           context,
           MaterialPageRoute(
             builder: (BuildContext context) => SliverAppBarPage(),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildQrReaderPageButton(BuildContext context) {
+    return CustomButton(
+      text: 'Qr Reader Page',
+      color: Colors.greenAccent,
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (BuildContext context) => QrReaderPage(),
           ),
         );
       },
