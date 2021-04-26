@@ -8,10 +8,11 @@ class CardPage extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Card(
-            color: Colors.amber,
-            elevation: 10,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(16.0),
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
+              ),
             ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
