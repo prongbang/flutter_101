@@ -3,7 +3,12 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 
-class LiquidSwipePage extends StatelessWidget {
+class LiquidSwipePage extends StatefulWidget {
+  @override
+  _LiquidSwipePageState createState() => _LiquidSwipePageState();
+}
+
+class _LiquidSwipePageState extends State<LiquidSwipePage> {
   int _page = 0;
 
   @override
@@ -31,9 +36,9 @@ class LiquidSwipePage extends StatelessWidget {
             slideIconWidget: Icon(Icons.arrow_back_ios, color: Colors.white),
             positionSlideIcon: 0.54,
             onPageChangeCallback: (page) {
-              // setState(() {
-              //   _page = page;
-              // });
+              setState(() {
+                _page = page;
+              });
             },
           ),
           Padding(
