@@ -12,6 +12,11 @@ class NavigatorPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Navigator'),
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios_outlined),
+            onPressed: () {
+              Navigator.pop(context, MyArguments(data: "Callback Data"));
+            }),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -66,7 +71,11 @@ class NavigatorPage extends StatelessWidget {
                           arguments: MyArguments(data: 'Push'),
                         ),
                       ),
-                    ).then((value) => print(value));
+                    ).then((value) {
+                      if (value is MyArguments) {
+                        print(value.data);
+                      }
+                    });
                   },
                 ),
               ),
@@ -155,7 +164,7 @@ class NavigatorPage extends StatelessWidget {
                     Navigator.pushNamedAndRemoveUntil(
                       context,
                       navigatorRoute,
-                      ModalRoute.withName('/'),
+                      ModalRoute.withName("/"),
                     ).then((value) => print(value));
                   },
                 ),
