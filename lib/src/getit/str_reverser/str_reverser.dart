@@ -22,7 +22,7 @@ class StrReverser implements Reverser {
     final reversed = value.split('').reversed.join('');
 
     // Print string
-    strPrinter.print(reversed);
+    strPrinter.println(reversed);
 
     return Future.value(reversed);
   }
