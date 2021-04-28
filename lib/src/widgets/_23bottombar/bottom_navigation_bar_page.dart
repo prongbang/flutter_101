@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
-class BottomNavigationBarPage extends StatelessWidget {
+class BottomNavigationBarPage extends StatefulWidget {
+  @override
+  _BottomNavigationBarPageState createState() =>
+      _BottomNavigationBarPageState();
+}
+
+class _BottomNavigationBarPageState extends State<BottomNavigationBarPage> {
   int _selectedIndex = 0;
 
   @override
@@ -14,6 +20,7 @@ class BottomNavigationBarPage extends StatelessWidget {
           Text('Index 0: Home'),
           Text('Index 1: Business'),
           Text('Index 2: School'),
+          Text('Index 3: School'),
         ].elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -30,8 +37,13 @@ class BottomNavigationBarPage extends StatelessWidget {
             icon: Icon(Icons.school),
             label: 'School',
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school),
+            label: 'School',
+          ),
         ],
-        currentIndex: 0,
+        currentIndex: _selectedIndex,
+        type: BottomNavigationBarType.fixed,
         selectedItemColor: Colors.amber[800],
         onTap: _onItemTapped,
       ),
@@ -39,8 +51,8 @@ class BottomNavigationBarPage extends StatelessWidget {
   }
 
   void _onItemTapped(int index) {
-    // setState(() {
-    //   _selectedIndex = index;
-    // });
+    setState(() {
+      _selectedIndex = index;
+    });
   }
 }
