@@ -1,3 +1,3 @@
 abstract class Printer {
-  void print(String message);
+  void println(String message);
 }
