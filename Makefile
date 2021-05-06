@@ -10,9 +10,6 @@ create_widget:
 create_commons:
 	flutter create --template=package ./commons/$(name)
 
-cer_to_ctr:
-	openssl x509 -inform DER -in servicekrungsrigroup.com.cer -out servicekrungsrigroup.com-2020.crts
-
 # make pod-update
 pod-update:
 	pod repo update
