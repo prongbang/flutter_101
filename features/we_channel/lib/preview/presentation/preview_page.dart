@@ -7,7 +7,10 @@ class PreviewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final arguments = context.routeArguments<Channel>();
-    if (arguments == null) Navigator.pop(context);
+    if (arguments == null) {
+      Navigator.pop(context);
+      return SizedBox();
+    }
     return Scaffold(
       appBar: AppBar(
         title: Text(arguments.title),

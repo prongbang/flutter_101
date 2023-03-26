@@ -28,7 +28,7 @@ class DatePickerPage extends StatelessWidget {
   }
 
   void _showDatePicker(BuildContext context) async {
-    final DateTime picked = await showDatePicker(
+    final DateTime? picked = await showDatePicker(
       context: context,
       initialDate: DateTime.now(),
       firstDate: DateTime(2000),

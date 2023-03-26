@@ -10,16 +10,16 @@ String channelToJson(List<Channel> data) =>
 
 class Channel {
   Channel({
-    this.id,
-    this.title,
-    this.cover,
-    this.hlsUrl,
-    this.author,
-    this.avatar,
-    this.view,
-    this.date,
-    this.time,
-    this.comments,
+    this.id = 0,
+    this.title = '',
+    this.cover = '',
+    this.hlsUrl = '',
+    this.author = '',
+    this.avatar = '',
+    this.view = '',
+    this.date = '',
+    this.time = '',
+    this.comments = const <Comment>[],
   });
 
   int id;
@@ -34,18 +34,19 @@ class Channel {
   List<Comment> comments;
 
   factory Channel.fromJson(Map<String, dynamic> json) => Channel(
-        id: json["id"],
-        title: json["title"],
-        cover: json["cover"],
-        hlsUrl: json["hlsUrl"],
-        author: json["author"],
-        avatar: json["avatar"],
-        view: json["view"],
-        date: json["date"],
-        time: json["time"],
+        id: json["id"] ?? 0,
+        title: json["title"] ?? '',
+        cover: json["cover"] ?? '',
+        hlsUrl: json["hlsUrl"] ?? '',
+        author: json["author"] ?? '',
+        avatar: json["avatar"] ?? '',
+        view: json["view"] ?? '',
+        date: json["date"] ?? '',
+        time: json["time"] ?? '',
         comments: json["comments"] != null
             ? List<Comment>.from(
-                json["comments"].map((x) => Comment.fromJson(x)))
+                json["comments"].map((x) => Comment.fromJson(x)),
+              )
             : [],
       );
 

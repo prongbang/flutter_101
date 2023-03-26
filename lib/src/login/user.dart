@@ -2,8 +2,8 @@ import 'package:get_storage/get_storage.dart';
 
 class User {
   User({
-    this.username,
-    this.password,
+    this.username = '',
+    this.password = '',
   });
 
   final box = GetStorage();
@@ -11,8 +11,8 @@ class User {
   String password;
 
   factory User.fromJson(Map<String, dynamic> json) => User(
-        username: json["username"],
-        password: json["password"],
+        username: json["username"] ?? '',
+        password: json["password"] ?? '',
       );
 
   Map<String, dynamic> toJson() => {
@@ -28,7 +28,7 @@ class User {
     return box.write('user', toJson());
   }
 
-  Future<User> get() async {
+  Future<User?> get() async {
     final user = box.read('user');
     if (user != null) {
       return User.fromJson(user);

@@ -1,5 +1,5 @@
 class MyArguments {
   String data;
 
-  MyArguments({this.data});
+  MyArguments({this.data = ''});
 }

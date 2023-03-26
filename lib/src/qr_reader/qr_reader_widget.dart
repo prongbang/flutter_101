@@ -9,9 +9,8 @@ class QrReaderWidget extends StatefulWidget {
 }
 
 class _QrReaderWidgetState extends State<QrReaderWidget> {
-  Barcode result;
-  QRViewController controller;
-  final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
+  Barcode? _result;
+  QRViewController? _controller;
 
   // In order to get hot reload to work we need to pause the camera if the platform
   // is android, or resume the camera if the platform is iOS.
@@ -19,9 +18,9 @@ class _QrReaderWidgetState extends State<QrReaderWidget> {
   void reassemble() {
     super.reassemble();
     if (Platform.isAndroid) {
-      controller.pauseCamera();
+      _controller?.pauseCamera();
     }
-    controller.resumeCamera();
+    _controller?.resumeCamera();
   }
 
   @override
@@ -29,7 +28,10 @@ class _QrReaderWidgetState extends State<QrReaderWidget> {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          Expanded(flex: 4, child: _buildQrView(context)),
+          Expanded(
+            flex: 4,
+            child: QrReaderViewWidget(onQRViewCreated: _onQRViewCreated),
+          ),
           Expanded(
             flex: 1,
             child: FittedBox(
@@ -37,9 +39,10 @@ class _QrReaderWidgetState extends State<QrReaderWidget> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  if (result != null)
+                  if (_result != null)
                     Text(
-                        'Barcode Type: ${result.format}   Data: ${result.code}')
+                      'Barcode Type: ${_result?.format}   Data: ${_result?.code}',
+                    )
                   else
                     Text('Scan a code'),
                   Row(
@@ -50,11 +53,11 @@ class _QrReaderWidgetState extends State<QrReaderWidget> {
                         margin: EdgeInsets.all(8),
                         child: ElevatedButton(
                             onPressed: () async {
-                              await controller?.toggleFlash();
+                              await _controller?.toggleFlash();
                               setState(() {});
                             },
                             child: FutureBuilder(
-                              future: controller?.getFlashStatus(),
+                              future: _controller?.getFlashStatus(),
                               builder: (context, snapshot) {
                                 return Text('Flash: ${snapshot.data}');
                               },
@@ -64,11 +67,11 @@ class _QrReaderWidgetState extends State<QrReaderWidget> {
                         margin: EdgeInsets.all(8),
                         child: ElevatedButton(
                             onPressed: () async {
-                              await controller?.flipCamera();
+                              await _controller?.flipCamera();
                               setState(() {});
                             },
                             child: FutureBuilder(
-                              future: controller?.getCameraInfo(),
+                              future: _controller?.getCameraInfo(),
                               builder: (context, snapshot) {
                                 if (snapshot.data != null) {
                                   return Text('Camera facing ${snapshot.data}');
@@ -88,7 +91,7 @@ class _QrReaderWidgetState extends State<QrReaderWidget> {
                         margin: EdgeInsets.all(8),
                         child: ElevatedButton(
                           onPressed: () async {
-                            await controller?.pauseCamera();
+                            await _controller?.pauseCamera();
                           },
                           child: Text('pause', style: TextStyle(fontSize: 20)),
                         ),
@@ -97,7 +100,7 @@ class _QrReaderWidgetState extends State<QrReaderWidget> {
                         margin: EdgeInsets.all(8),
                         child: ElevatedButton(
                           onPressed: () async {
-                            await controller?.resumeCamera();
+                            await _controller?.resumeCamera();
                           },
                           child: Text('resume', style: TextStyle(fontSize: 20)),
                         ),
@@ -113,7 +116,33 @@ class _QrReaderWidgetState extends State<QrReaderWidget> {
     );
   }
 
-  Widget _buildQrView(BuildContext context) {
+  void _onQRViewCreated(QRViewController controller) {
+    setState(() {
+      this._controller = controller;
+    });
+    controller.scannedDataStream.listen((scanData) {
+      setState(() {
+        _result = scanData;
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    _controller?.dispose();
+    super.dispose();
+  }
+}
+
+class QrReaderViewWidget extends StatelessWidget {
+  final QRViewCreatedCallback onQRViewCreated;
+
+  QrReaderViewWidget({Key? key, required this.onQRViewCreated}) : super(key: key);
+
+  final _qrKey = GlobalKey(debugLabel: 'QR');
+
+  @override
+  Widget build(BuildContext context) {
     // For this example we check how width or tall the device is and change the scanArea and overlay accordingly.
     var scanArea = (MediaQuery.of(context).size.width < 400 ||
             MediaQuery.of(context).size.height < 400)
@@ -122,31 +151,15 @@ class _QrReaderWidgetState extends State<QrReaderWidget> {
     // To ensure the Scanner view is properly sizes after rotation
     // we need to listen for Flutter SizeChanged notification and update controller
     return QRView(
-      key: qrKey,
-      onQRViewCreated: _onQRViewCreated,
+      key: _qrKey,
+      onQRViewCreated: onQRViewCreated,
       overlay: QrScannerOverlayShape(
-          borderColor: Colors.red,
-          borderRadius: 10,
-          borderLength: 30,
-          borderWidth: 10,
-          cutOutSize: scanArea),
+        borderColor: Colors.red,
+        borderRadius: 10,
+        borderLength: 30,
+        borderWidth: 10,
+        cutOutSize: scanArea,
+      ),
     );
-  }
-
-  void _onQRViewCreated(QRViewController controller) {
-    setState(() {
-      this.controller = controller;
-    });
-    controller.scannedDataStream.listen((scanData) {
-      setState(() {
-        result = scanData;
-      });
-    });
-  }
-
-  @override
-  void dispose() {
-    controller?.dispose();
-    super.dispose();
   }
 }

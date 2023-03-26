@@ -9,8 +9,8 @@ import 'package:mockito/mockito.dart';
 class MockDataStoreDataSource extends Mock implements DataStoreDataSource {}
 
 void main() {
-  DataStoreDataSource dataSource;
-  DataStoreRepository repository;
+  late DataStoreDataSource dataSource;
+  late DataStoreRepository repository;
 
   setUp(() {
     dataSource = MockDataStoreDataSource();

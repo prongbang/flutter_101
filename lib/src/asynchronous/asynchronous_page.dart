@@ -11,7 +11,7 @@ class AsynchronousPage extends StatelessWidget {
             future: _getData(),
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return Text(snapshot.data);
+                return Text('${snapshot.data}');
               }
               return CircularProgressIndicator();
             },

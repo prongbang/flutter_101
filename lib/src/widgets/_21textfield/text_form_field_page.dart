@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class Login {
   String username;
   String password;
+
+  Login({this.username = '', this.password = ''});
 }
 
 class TextFormFieldPage extends StatelessWidget {
@@ -30,7 +32,7 @@ class TextFormFieldPage extends StatelessWidget {
                   return null;
                 },
                 onSaved: (newValue) {
-                  _login.username = newValue;
+                  _login.username = newValue ?? '';
                 },
               ),
             ),
@@ -49,7 +51,7 @@ class TextFormFieldPage extends StatelessWidget {
                   return null;
                 },
                 onSaved: (newValue) {
-                  _login.password = newValue;
+                  _login.password = newValue ?? '';
                 },
               ),
             ),
@@ -62,8 +64,8 @@ class TextFormFieldPage extends StatelessWidget {
                   color: Colors.blue,
                   textColor: Colors.white,
                   onPressed: () {
-                    if (_formKey.currentState.validate()) {
-                      _formKey.currentState.save();
+                    if (_formKey.currentState?.validate() ?? false) {
+                      _formKey.currentState?.save();
                       print('username: ${_login.username}');
                       print('password: ${_login.password}');
                     }

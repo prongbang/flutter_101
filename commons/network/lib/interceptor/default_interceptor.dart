@@ -37,7 +37,7 @@ class ApiDefaultInterceptor extends DefaultInterceptor {
     print(
         "DefaultInterceptor ERROR[${err?.response?.statusCode}] => PATH: ${err?.requestOptions?.path}");
     switch (err.type) {
-      case DioErrorType.connectTimeout:
+      case DioErrorType.connectionTimeout:
       case DioErrorType.receiveTimeout:
       case DioErrorType.sendTimeout:
         throw TimeoutException(err.message);

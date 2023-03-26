@@ -28,7 +28,7 @@ class CacheDataStoreRepository implements DataStoreRepository {
       dataStoreDataSource.listenKey(key, callback);
 
   @override
-  T read<T>(String key) => dataStoreDataSource.read<T>(key);
+  T? read<T>(String key) => dataStoreDataSource.read<T>(key);
 
   @override
   Future<void> remove(String key) async => dataStoreDataSource.remove(key);

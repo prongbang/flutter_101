@@ -38,7 +38,7 @@ class ButtonsPage extends StatelessWidget {
             icon: Icon(Icons.delete),
             onPressed: () {},
           ),
-          OutlineButton(
+          OutlinedButton(
             onPressed: () {},
             child: Text('OutlineButton'),
           ),

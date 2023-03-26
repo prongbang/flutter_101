@@ -4,14 +4,14 @@ import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
 
 class LivePlayer extends StatefulWidget {
-  final ValueChanged<bool> onFullscreen;
+  final ValueChanged<bool>? onFullscreen;
   final String url;
   final double aspectRatio;
 
   const LivePlayer({
-    Key key,
+    Key? key,
     this.onFullscreen,
-    @required this.url,
+    required this.url,
     this.aspectRatio = 16 / 9,
   }) : super(key: key);
 
@@ -37,12 +37,6 @@ class _LivePlayerState extends State<LivePlayer> {
                   "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5In0.Ww7OlKzPUUfKX4kO8iON0_k7xgdsMu9hr5ZPufSirDw",
             },
             liveStream: false,
-            useHlsSubtitles: true,
-            hlsTrackNames: [
-              "Low quality",
-              "Not so low quality",
-              "Medium quality"
-            ],
             subtitles: [
               BetterPlayerSubtitlesSource(
                 type: BetterPlayerSubtitlesSourceType.network,

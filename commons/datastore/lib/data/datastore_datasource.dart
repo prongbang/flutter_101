@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 
 abstract class DataStoreDataSource {
-  T read<T>(String key);
+  T? read<T>(String key);
 
   Future<void> write(String key, dynamic value);
 

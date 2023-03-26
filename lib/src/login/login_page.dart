@@ -38,7 +38,7 @@ class LoginPage extends StatelessWidget {
                             return null;
                           },
                           onSaved: (newValue) {
-                            _user.username = newValue;
+                            _user.username = newValue ?? '';
                           },
                         ),
                       ),
@@ -57,7 +57,7 @@ class LoginPage extends StatelessWidget {
                             return null;
                           },
                           onSaved: (newValue) {
-                            _user.password = newValue;
+                            _user.password = newValue ?? '';
                           },
                         ),
                       ),
@@ -70,8 +70,8 @@ class LoginPage extends StatelessWidget {
                             color: Colors.blue,
                             textColor: Colors.white,
                             onPressed: () async {
-                              if (_formKey.currentState.validate()) {
-                                _formKey.currentState.save();
+                              if (_formKey.currentState?.validate() ?? false) {
+                                _formKey.currentState?.save();
                                 print('username: ${_user.username}');
                                 print('password: ${_user.password}');
                                 if (_user.login()) {

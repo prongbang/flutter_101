@@ -27,7 +27,7 @@ class DataStoreLocalDataSource implements DataStoreDataSource {
       getStorage.listenKey(key, callback);
 
   @override
-  T read<T>(String key) => getStorage.read<T>(key);
+  T? read<T>(String key) => getStorage.read<T>(key);
 
   @override
   Future<void> remove(String key) async => getStorage.remove(key);

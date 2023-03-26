@@ -3,7 +3,11 @@ class AppConfig {
   String buildFlavor;
   String baseURL;
 
-  AppConfig({this.applicationName, this.buildFlavor, this.baseURL});
+  AppConfig({
+    this.applicationName = '',
+    this.buildFlavor = '',
+    this.baseURL = '',
+  });
 
   static String appName = 'Flutter101';
   static String productionFlavor = "production";

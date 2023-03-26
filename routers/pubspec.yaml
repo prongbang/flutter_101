@@ -1,18 +1,17 @@
 name: routers
 description: Routers package.
 version: 0.0.1
-author:
 homepage:
 publish_to: none
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.19.2 <3.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  page_transition: ^1.1.7+6
+  flutter_page_transition_plus: ^1.0.1
 
   # navigation package
   navigation:

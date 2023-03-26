@@ -1,0 +1,14 @@
+name: flutter_101
+
+packages:
+  - core/*
+  - commons/*
+  - features/*
+  - navigation/*
+  - routers/*
+  - theme/*
+  - widgets/*
+
+scripts:
+  analyze:
+    exec: dart analyze .

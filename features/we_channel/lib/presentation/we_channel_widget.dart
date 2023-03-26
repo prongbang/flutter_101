@@ -9,7 +9,7 @@ class WeChannelWidget extends StatelessWidget {
       future: Channel().mocks(),
       builder: (context, snapshot) {
         if (snapshot.hasData) {
-          List<Channel> channels = snapshot.data;
+          List<Channel> channels = snapshot.data ?? <Channel>[];
           return ListView.separated(
             itemCount: channels.length,
             itemBuilder: (context, index) {

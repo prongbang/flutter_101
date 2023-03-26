@@ -22,7 +22,7 @@ class _BlocPageState extends State<BlocPage> {
 }
 
 class BlocWidget extends StatelessWidget {
-  const BlocWidget({Key key}) : super(key: key);
+  const BlocWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -4,9 +4,9 @@ import 'package:we_channel/domain/channel.dart';
 
 class PreviewWidget extends StatelessWidget {
   final Channel channel;
-  final String url = 'https://vd1.wmspanel.com/video_demo/stream/playlist.m3u8';
+  final String _url = 'https://vd1.wmspanel.com/video_demo/stream/playlist.m3u8';
 
-  const PreviewWidget({Key key, @required this.channel}) : super(key: key);
+  const PreviewWidget({Key? key, required this.channel}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -81,13 +81,6 @@ class PreviewWidget extends StatelessWidget {
                         ],
                       ),
                     ],
-                  ),
-                );
-
-                return Container(
-                  margin: const EdgeInsets.all(30),
-                  child: Center(
-                    child: CircularProgressIndicator(),
                   ),
                 );
               },

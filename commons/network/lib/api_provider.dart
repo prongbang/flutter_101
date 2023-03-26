@@ -16,9 +16,9 @@ class ApiClientProvider implements ApiProvider {
   Dio create() {
     final int seconds = 30;
     var options = BaseOptions(
-      receiveTimeout: 1000 * seconds,
-      connectTimeout: 1000 * seconds,
-      sendTimeout: 1000 * seconds,
+      receiveTimeout: Duration(seconds: seconds),
+      connectTimeout: Duration(seconds: seconds),
+      sendTimeout: Duration(seconds: seconds),
       baseUrl: appConfig.baseURL,
     );
 
