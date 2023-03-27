@@ -106,14 +106,6 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
-  page_transition:
-    dependency: transitive
-    description:
-      name: page_transition
-      sha256: f97a10deb0487a04e6813100d0404c124527de51e21cc8d21f37431ec80c6c66
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.7+6"
   path:
     dependency: transitive
     description:
