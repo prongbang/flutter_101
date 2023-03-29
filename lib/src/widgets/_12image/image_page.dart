@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ImagePage extends StatelessWidget {
   final String image1 =
-      'https://www.tftus.com/storage/2019/11/Blog-image-8-12-2020-Why-Mostly-Android-Developer-Consider-Flutter-App-Development.jpg';
+      'https://www.tnrr.in.th/wp-content/uploads/2022/12/3376-1.png';
   final String image2 =
       'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg';
 
