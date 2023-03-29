@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
+import 'package:flutter_page_transition_plus/flutter_page_transition_plus.dart';
 
 class AppRouters {
   static final RouteFactory routes = (RouteSettings settings) {
@@ -16,23 +16,10 @@ class AppRouters {
   };
 
   static nextTransition(RouteSettings settings, Widget target) {
-    return PageTransition(
-        settings: settings,
-        child: target,
-        type: PageTransitionType.rightToLeft);
-  }
-
-  static backTransition(RouteSettings settings, Widget target) {
-    return PageTransition(
-        settings: settings,
-        child: target,
-        type: PageTransitionType.leftToRight);
+    return FlutterPageTransition.next(settings, target);
   }
 
   static toTopTransition(RouteSettings settings, Widget target) {
-    return PageTransition(
-        settings: settings,
-        child: target,
-        type: PageTransitionType.bottomToTop);
+    return FlutterPageTransition.fadeUpwards(settings, target);
   }
 }
