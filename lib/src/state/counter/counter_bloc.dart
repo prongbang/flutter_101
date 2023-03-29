@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 
@@ -7,17 +5,21 @@ part 'counter_event.dart';
 part 'counter_state.dart';
 
 class CounterBloc extends Bloc<CounterEvent, CounterState> {
-  CounterBloc() : super(CounterData(0));
+  CounterBloc() : super(CounterData(0)) {
+    on<CounterDecreaseEvent>((event, emit) {
+      // Get current state
+      var currentState = (state as CounterData).data;
 
-  @override
-  Stream<CounterState> mapEventToState(CounterEvent event) async* {
-    // Get current state
-    var currentState = (state as CounterData).data;
-    if (event is CounterIncrease) {
-      yield CounterData(++currentState);
-    }
-    if (event is CounterDecrease) {
-      yield CounterData(--currentState);
-    }
+      // Update state
+      emit(CounterData(--currentState));
+    });
+
+    on<CounterIncreaseEvent>((event, emit) {
+      // Get current state
+      var currentState = (state as CounterData).data;
+
+      // Update state
+      emit(CounterData(++currentState));
+    });
   }
 }

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class BottomSheetDialogPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Center(
       child: TextButton(
         onPressed: () {
           _showBottomSheet(context);

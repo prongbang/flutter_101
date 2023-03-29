@@ -6,6 +6,7 @@ class SingleChildScrollViewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text('SingleChildScrollView')),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

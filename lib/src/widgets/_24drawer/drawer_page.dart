@@ -6,6 +6,12 @@ class DrawerPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Drawer'),
+        actions: [
+          IconButton(
+            onPressed: () => Navigator.pop(context),
+            icon: Icon(Icons.close),
+          ),
+        ],
       ),
       drawer: Drawer(
         child: ListView(

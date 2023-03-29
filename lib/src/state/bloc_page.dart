@@ -26,6 +26,7 @@ class BlocWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('Render');
     return Container(
       child: Center(
         child: Column(
@@ -40,14 +41,14 @@ class BlocWidget extends StatelessWidget {
             TextButton(
               child: Text('+Increase'),
               onPressed: () {
-                context.read<CounterBloc>().add(CounterIncrease());
+                context.read<CounterBloc>().add(CounterIncreaseEvent());
               },
             ),
             SizedBox(width: 16),
             TextButton(
               child: Text('-Decrease'),
               onPressed: () {
-                context.read<CounterBloc>().add(CounterDecrease());
+                context.read<CounterBloc>().add(CounterDecreaseEvent());
               },
             ),
           ],

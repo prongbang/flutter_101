@@ -5,14 +5,21 @@ class DatePickerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: EdgeInsets.all(16),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          TextButton(
-            onPressed: () {
-              _showDatePicker(context);
-            },
-            child: Text('Show Date Picker'),
+          Text('Android'),
+          Center(
+            child: TextButton(
+              onPressed: () {
+                _showDatePicker(context);
+              },
+              child: Text('Show Date Picker'),
+            ),
           ),
+          SizedBox(height: 16),
+          Text('iOS'),
           Container(
             height: 400,
             child: CupertinoDatePicker(

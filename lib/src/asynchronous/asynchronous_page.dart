@@ -22,7 +22,7 @@ class AsynchronousPage extends StatelessWidget {
   }
 
   Future<String> _getData() async {
-    await Future.delayed(Duration(seconds: 5));
+    await Future.delayed(Duration(seconds: 3));
     return 'Hello await/async';
   }
 }
