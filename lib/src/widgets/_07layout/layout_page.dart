@@ -3,15 +3,18 @@ import 'package:flutter/material.dart';
 class LayoutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size.width;
+    print('size: $size');
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text('Row: mainAxisAlignment: spaceBetween'),
         Container(
-          color: Colors.yellow,
+          color: Colors.amber,
           height: 100,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(color: Colors.red, height: 50, width: 50),
               Container(color: Colors.green, height: 50, width: 50),
@@ -39,6 +42,7 @@ class LayoutPage extends StatelessWidget {
           height: 200,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(color: Colors.red, height: 50, width: 50),
               Container(color: Colors.green, height: 50, width: 50),

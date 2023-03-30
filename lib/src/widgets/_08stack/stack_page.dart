@@ -6,6 +6,7 @@ class StackPage extends StatelessWidget {
     return Container(
       color: Colors.cyan,
       child: Stack(
+        alignment: AlignmentDirectional.center,
         children: <Widget>[
           Container(
             width: 130,

@@ -8,6 +8,11 @@ class PaddingPage extends StatelessWidget {
       child: Container(
         height: 100,
         color: Colors.deepPurple,
+        child: Container(
+          margin: EdgeInsets.all(20),
+          height: 50,
+          color: Colors.amber,
+        ),
       ),
     );
   }
